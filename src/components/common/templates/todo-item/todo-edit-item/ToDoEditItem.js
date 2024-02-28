@@ -7,7 +7,7 @@ import StandardBtn from "../../../buttons/standard-btn/StandardBtn";
 function ToDoEditItem({ todo, setIsEditMode }) {
   const [isDone, setIsDone] = useState(todo.isDone);
   const [task, setTask] = useState(todo.task);
-  const [dueDate, setDueDate] = useState(todo.dueDate);
+  const [dueDate, setDueDate] = useState(todo.DueDate);
 
   async function onClickSendUpdate() {
     await TodosMutations.updateTodo(todo.id, task, isDone, dueDate);
